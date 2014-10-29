@@ -19,3 +19,7 @@ sl = Solution()
 sl.solveSudoku(board)
 for rows in board:
 	print rows 
+
+resultFile = open("solved.csv",'wb')
+wr = csv.writer(resultFile, dialect='excel')
+wr.writerows(board)
